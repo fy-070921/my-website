@@ -1,0 +1,12 @@
+{
+  "name": "fy-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FY 的个人网站（纯静态 HTML/CSS/JS，适配 Cloudflare Pages，本地预览用 serve）",
+  "scripts": {
+    "preview": "serve . -l 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

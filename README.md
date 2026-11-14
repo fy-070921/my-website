@@ -1,6 +1,6 @@
 # 我的个人网站
 
-FY 的个人网站——纯静态 HTML/CSS/JS，零依赖、零费用、没有任何密钥。
+FY 的个人网站——纯静态 HTML/CSS/JS，零费用、没有任何密钥、没有任何后端/Python 代码。网站本身零依赖（`serve` 只是本地预览的开发工具，不会部署上去），适配 Cloudflare Pages。
 
 线上网址：课后部署完成后填在这里。
 
@@ -8,16 +8,15 @@ FY 的个人网站——纯静态 HTML/CSS/JS，零依赖、零费用、没有�
 
 **方式一（最简单）：** 直接双击 `index.html`，浏览器打开就能看。
 
-**方式二（推荐，和真实部署效果一致）：** 在项目文件夹下开一个本地小服务器：
+**方式二（推荐，和真实部署效果一致）：** 用 Node 的 `serve` 起本地静态服务器（不需要写任何后端代码）：
 
 ```bash
-# Windows（在项目目录 D:\桌面\my-website 下）
-py -m http.server 8000
-# 或者
-python -m http.server 8000
+# 在项目目录 D:\桌面\my-website 下
+npm install        # 第一次装一下本地预览工具（只需一次）
+npm run preview    # 启动本地服务，端口 3000
 ```
 
-然后浏览器打开 <http://localhost:8000>。
+然后浏览器打开 <http://localhost:3000>。想停服务，在命令行窗口按 `Ctrl + C`。
 
 ## 页面结构
 
@@ -27,6 +26,7 @@ python -m http.server 8000
 | `works.html` | 作品页：摄影 / 绘画 / 运动 三个分区，各留 4 个空位框 |
 | `css/style.css` | 全部样式（配色、排版、动画都在这里，改颜色改 `:root` 里的变量） |
 | `js/main.js` | 导航状态、滚动淡入、关键词轮换、点击复制邮箱 |
+| `package.json` | 本地预览用：`npm run preview` 起 serve 静态服务（开发工具，不参与部署） |
 
 ## 怎么放上自己的作品
 
@@ -65,13 +65,26 @@ python -m http.server 8000
 - GitHub 链接 → `index.html` 里搜 `github.com/fy-070921`（两处：显示文字 + `href`）
 - 配色 / 字体 → `css/style.css` 最上面的 `:root` 变量
 
-## 想免费上线（可选）
+## 想免费上线（可选）：Cloudflare Pages
 
-GitHub Pages，免费、不用密钥：
+纯静态站，Cloudflare Pages 直接托管，不用改任何代码、不用密钥：
+
+**方式一（拖拽上传，最快）：**
+
+1. 登录 <https://dash.cloudflare.com> → **Workers & Pages** → **Create** → **Pages** → **Upload assets**
+2. 把项目文件夹拖进去上传（`node_modules` 不用选）
+3. 上传完就有网址 `https://xxx.pages.dev`
+
+**方式二（连 GitHub 仓库，以后自动部署）：**
 
 1. 把这个文件夹推到 GitHub 仓库（已有仓库更好）
-2. 仓库的 **Settings → Pages → Source** 选 `main` 分支、`/ (root)`
-3. 等一两分钟，网址就是 `https://fy-070921.github.io/仓库名/`，填到本文件顶部
+2. Cloudflare 控制台 → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**，选中仓库
+3. 构建设置这样填：
+   - 构建命令（Build command）：**留空**
+   - 输出目录（Build output directory）：**留空**（就是项目根目录）
+4. 保存并部署，网址是 `https://xxx.pages.dev`，以后每次 push 自动更新，填到本文件顶部
+
+> 说明：页面用的都是相对路径（`css/style.css`、`js/main.js`），部署到任何子路径都能正常显示；`package.json` 只是本地预览工具，不影响部署。
 
 ## 说明
 
