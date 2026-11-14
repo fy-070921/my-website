@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品 · FY</title>
+  <meta name="description" content="FY 的作品页——摄影、绘画、运动。作品整理中，位置已留好。">
+  <meta name="theme-color" content="#FAF6EF">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="作品 · FY">
+  <meta property="og:description" content="FY 的作品页——摄影、绘画、运动。">
+  <meta property="og:locale" content="zh_CN">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C2603F'/%3E%3Ctext x='32' y='43' font-size='28' font-family='Georgia,serif' fill='%23FAF6EF' text-anchor='middle'%3EFY%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ 顶部导航 ============ -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">FY<span class="dot">.</span></a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="works.html" class="active">作品</a>
+        <a href="index.html#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ 作品页头 ============ -->
+    <section class="works-hero">
+      <div class="container">
+        <p class="section-label reveal"><span class="en">Works</span><span class="zh">作品</span></p>
+        <h1 class="reveal">我拍的，<br>我画的。</h1>
+        <p class="works-note reveal">作品还在整理中——下面先留好位置。放上去之后，这里就是我的小展厅。</p>
+      </div>
+    </section>
+
+    <!--
+      ============================================================
+      怎么放上你自己的作品（三个区都一样）：
+      1. 在项目里建文件夹：assets/photos、assets/art、assets/sport，把图片放进去
+      2. 把下面某个「空位」整个 <div class="frame ..."> ... </div>
+         换成：
+         <figure class="frame reveal">
+           <img src="assets/photos/01.jpg" alt="一句话描述这张作品">
+         </figure>
+      3. 刷新页面就能看到。图片建议宽度 1200px 左右，jpg/png/webp 都可以。
+      ============================================================
+    -->
+
+    <!-- ============ 摄影 ============ -->
+    <section class="section work-section" id="photo">
+      <div class="container">
+        <div class="work-head reveal">
+          <h2>摄影 <span class="en">Photography</span></h2>
+          <p class="count">4 个位置</p>
+        </div>
+        <div class="work-grid">
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>PHOTO 01</small>
+            <p class="hint">放一张你满意的照片</p>
+            <!-- 换成真图时，把上面三行换成：<img src="assets/photos/01.jpg" alt="作品描述"> -->
+          </div>
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>PHOTO 02</small>
+            <p class="hint">光影、街头、风景都好</p>
+          </div>
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>PHOTO 03</small>
+            <p class="hint">这一格也是空的</p>
+          </div>
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>PHOTO 04</small>
+            <p class="hint">想放几张都可以，自己加格子</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 绘画 ============ -->
+    <section class="section work-section" id="paint">
+      <div class="container">
+        <div class="work-head reveal">
+          <h2>绘画 <span class="en">Painting &amp; Drawing</span></h2>
+          <p class="count">4 个位置</p>
+        </div>
+        <div class="work-grid">
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>ART 01</small>
+            <p class="hint">放一张你的画</p>
+            <!-- 换成真图时，把上面三行换成：<img src="assets/art/01.jpg" alt="作品描述"> -->
+          </div>
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>ART 02</small>
+            <p class="hint">扫描件、拍照都行</p>
+          </div>
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>ART 03</small>
+            <p class="hint">这一格也是空的</p>
+          </div>
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>ART 04</small>
+            <p class="hint">想放几张都可以，自己加格子</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 运动 ============ -->
+    <section class="section work-section" id="sport">
+      <div class="container">
+        <div class="work-head reveal">
+          <h2>运动 <span class="en">Sports &amp; Life</span></h2>
+          <p class="count">4 个位置</p>
+        </div>
+        <div class="work-grid">
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>SPORT 01</small>
+            <p class="hint">放一张运动的照片</p>
+            <!-- 换成真图时，把上面三行换成：<img src="assets/sport/01.jpg" alt="作品描述"> -->
+          </div>
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>SPORT 02</small>
+            <p class="hint">赛场、训练、日常都好</p>
+          </div>
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>SPORT 03</small>
+            <p class="hint">这一格也是空的</p>
+          </div>
+          <div class="frame reveal">
+            <span class="plus">+</span>
+            <small>SPORT 04</small>
+            <p class="hint">想放几张都可以，自己加格子</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 结尾邀请 ============ -->
+    <section class="section works-end">
+      <div class="container">
+        <p class="works-end-text reveal">作品慢慢放，不着急。</p>
+        <a class="btn btn-solid reveal" href="index.html#contact">想聊聊？来找我 →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 页脚 ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> FY · 画画和代码，都是认真的</p>
+      <nav class="footer-links" aria-label="页脚导航">
+        <a href="index.html">首页</a>
+        <a href="works.html">作品</a>
+        <a href="index.html#contact">联系</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
